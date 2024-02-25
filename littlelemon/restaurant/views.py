@@ -4,6 +4,13 @@ from .serializers import *
 from .models import *
 from rest_framework.permissions import IsAuthenticated
 # Create your views here.
+from django.shortcuts import render
+
+# Create your views here.
+
+
+def index(request):
+    return render(request, 'index.html', {})
 
 
 class MenuItemsView(generics.ListCreateAPIView):
